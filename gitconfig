@@ -1,5 +1,23 @@
 [user]
 	email = vstrisovsky@gmail.com
 	name = Vladimir Strisovsky
+[alias]
+	co = checkout
+	ci = commit
+	st = status -s
+	br = branch
+	sub = submodule update --init --recursive
+	hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
+	type = cat-file -t
+	dump = cat-file -p
+	lg = log --oneline --all --graph --decorate
+	my = log --oneline --all --graph --decorate --author=Strisovsky
+	brup = remote update -p
+	report = log --branches=* --oneline --author=Strisovsky --format=\"%h %ad %s\"
+	commend = commit --amend --no-edit
+	merc = merge --no-ff
+	grog = log --graph --abbrev-commit --decorate --all --format=format:\"%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(dim white) - %an%C(reset) %C(bold green)(%ar)%C(reset)%C(bold yellow)%d%C(reset)%n %C(white)%s%C(reset)\"
+[core]
+	editor = joe
 [push]
 	default = simple
